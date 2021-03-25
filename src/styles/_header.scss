@@ -1,4 +1,9 @@
 .header {
+	nav {
+		position: relative;
+		z-index: 1;
+	}
+
 	@include breakpoint-down(medium) {
 		margin-bottom: pxToRem(70);
 	}
@@ -19,6 +24,7 @@
 		opacity: 0;
 		transition: opacity 300ms ease-in-out;
 		visibility: hidden;
+		z-index: 1;
 	}
 	&.open {
 		.header__toggle {
@@ -101,7 +107,7 @@
 		display: flex;
 		flex-direction: column;
 		padding-bottom: 0;
-
+		z-index: 1;
 		> div {
 			&:first-child {
 				flex: 1 0 auto;
