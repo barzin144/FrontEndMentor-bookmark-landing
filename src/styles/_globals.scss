@@ -13,6 +13,7 @@ body {
 	font-size: $font_sm;
 	font-family: 'Rubik';
 	font-weight: 400;
+	overflow-x: hidden;
 }
 
 button,
@@ -37,8 +38,19 @@ a:hover {
 		padding: pxToRem(30);
 	}
 
+	&--px {
+		padding-left: pxToRem(30);
+		padding-right: pxToRem(30);
+	}
+
 	&--py {
-		padding: 0 pxToRem(30) 0 pxToRem(30);
+		padding-top: pxToRem(30);
+		padding-bottom: pxToRem(30);
+	}
+
+	&--pr {
+		padding-left: 0;
+		padding-right: pxToRem(30);
 	}
 
 	@include breakpoint-down(medium) {
@@ -61,6 +73,17 @@ a:hover {
 	&-ai-c {
 		align-items: center;
 	}
+}
+
+h1 {
+	font-size: 45px;
+	font-weight: 500;
+	color: $Very_Dark_Blue;
+}
+
+p {
+	font-size: $font_sm;
+	color: $Grayish_Blue;
 }
 
 // Visibility
