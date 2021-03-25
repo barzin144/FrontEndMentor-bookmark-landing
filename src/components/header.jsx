@@ -33,7 +33,7 @@ const Header = () => {
                     <a href="#" className="button">LOGIN</a>
                 </div>
             </nav>
-            {mobileMenuOpen && <div className="header__menu container container--py hide-for-desktop">
+            {mobileMenuOpen && <div className="header__menu container container--px hide-for-desktop">
                 <div>
                 <div className="divider"></div>
                 <a href="#">FEATURES</a>
