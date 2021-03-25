@@ -29,7 +29,9 @@ a:visited,
 a:hover {
 	text-decoration: none;
 }
-
+p {
+	line-height: 1.5;
+}
 .container {
 	max-width: pxToRem(1110);
 	margin: 0 auto;

@@ -1,0 +1,23 @@
+.feature {
+	&__text {
+		text-align: center;
+
+		h1 {
+			font-size: pxToRem(30);
+			margin-bottom: pxToRem(30);
+		}
+
+		p {
+			@include breakpoint-up(large) {
+				padding-left: pxToRem(256);
+				padding-right: pxToRem(256);
+			}
+			font-size: $font_med;
+
+			@include breakpoint-down(medium) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
