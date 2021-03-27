@@ -26,10 +26,11 @@
 			box-shadow: 0px 2px 5px 0px $Grayish_Blue;
 			border-color: white;
 			color: $Very_Dark_Blue;
-			background-color: white;
+			background-color: $Gray;
 
 			&:hover {
 				border: 1px solid $Very_Dark_Blue;
+				background-color: white;
 				border-radius: 5px;
 				transition: border 300ms ease-in-out;
 			}
@@ -78,16 +79,17 @@
 			background-image: url('../images/illustration-hero.svg');
 			background-size: contain;
 			background-repeat: no-repeat;
-			width: 100%;
 			height: 100%;
 
 			@include breakpoint-down(medium) {
 				background-position: center center;
 				left: 0;
+				width: 100%;
 			}
 
 			@include breakpoint-up(large) {
-				left: 8%;
+				left: 10%;
+				width: 105%;
 			}
 		}
 
