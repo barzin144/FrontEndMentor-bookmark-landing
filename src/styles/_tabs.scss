@@ -21,6 +21,9 @@
 		}
 
 		@include breakpoint-down(medium) {
+			&:first-child {
+				border-top: 1px solid $Light_Gray;
+			}
 			width: 100%;
 		}
 
@@ -49,19 +52,43 @@
 	}
 
 	&__contentImage {
-		flex: 2;
 		position: relative;
 		height: pxToRem(336);
 
-		&::after {
+		@include breakpoint-down(small) {
+			height: pxToRem(272);
+		}
+		@include breakpoint-down(medium) {
+			width: 100%;
+		}
+
+		@include breakpoint-up(large) {
+			flex: 2;
+		}
+
+		.tabImage {
 			position: absolute;
 			content: "";
-			background-image: url('../images/illustration-features-tab-1.svg');
 			background-size: contain;
 			background-repeat: no-repeat;
 			width: 100%;
 			height: 100%;
-			background-position-x: left;
+
+			@include breakpoint-down(medium) {
+				background-position-x: center;
+			}
+			@include breakpoint-up(large) {
+				background-position-x: left;
+			}
+		}
+		.tabImageBigger {
+			height: 120%;
+			left: 10%;
+
+			@include breakpoint-down(medium) {
+				height: 100%;
+				left: 0;
+			}
 		}
 
 		&::before {
@@ -75,24 +102,19 @@
 			top: 25%;
 			right: 35%;
 
-			// @include breakpoint-up(large) {
-			// 	right: 40%;
-			// 	top: 30%;
-			// }
-			// @include breakpoint-down(medium) {
-			// 	right: 40%;
-			// 	top: 45%;
-			// }
-			// @include breakpoint-down(small) {
-			// 	right: 20%;
-			// 	top: 30%;
-			// 	width: 145%;
-			// }
+			@include breakpoint-down(small) {
+				height: 90%;
+				top: 16%;
+				right: 10%;
+			}
 		}
 	}
+
 	&__contentText {
 		flex: 1;
-		padding-top: pxToRem(80);
+		@include breakpoint-up(large) {
+			padding-top: pxToRem(80);
+		}
 		h1 {
 			font-size: pxToRem(25);
 			margin-bottom: pxToRem(30);
@@ -100,6 +122,17 @@
 
 		p {
 			font-size: $font_sm;
+		}
+
+		.button {
+			margin-top: pxToRem(32);
+		}
+		@include breakpoint-down(medium) {
+			text-align: center;
+			padding-top: pxToRem(160);
+		}
+		@include breakpoint-down(small) {
+			padding-top: pxToRem(80);
 		}
 	}
 }

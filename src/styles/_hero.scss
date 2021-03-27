@@ -21,33 +21,6 @@
 			margin-bottom: pxToRem(16);
 			font-weight: 500;
 		}
-
-		.gray-btn {
-			box-shadow: 0px 2px 5px 0px $Grayish_Blue;
-			border-color: white;
-			color: $Very_Dark_Blue;
-			background-color: $Gray;
-
-			&:hover {
-				border: 1px solid $Very_Dark_Blue;
-				background-color: white;
-				border-radius: 5px;
-				transition: border 300ms ease-in-out;
-			}
-		}
-
-		.blue-btn {
-			box-shadow: 0px 2px 5px 0px $Soft_Blue;
-			color: white;
-			background-color: $Soft_Blue;
-			border-color: $Soft_Blue;
-
-			&:hover {
-				color: $Soft_Blue;
-				background-color: white;
-				transition: background-color 300ms ease-in-out;
-			}
-		}
 	}
 
 	&__text {
