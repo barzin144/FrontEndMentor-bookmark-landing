@@ -1,0 +1,55 @@
+.download {
+	margin-top: pxToRem(160);
+
+	@include breakpoint-down(medium) {
+		margin-top: pxToRem(80);
+	}
+
+	&__text {
+		text-align: center;
+
+		h1 {
+			font-size: pxToRem(30);
+			margin-bottom: pxToRem(30);
+		}
+
+		p {
+			@include breakpoint-up(large) {
+				padding-left: pxToRem(256);
+				padding-right: pxToRem(256);
+			}
+			font-size: $font_med;
+
+			@include breakpoint-down(medium) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	&__cardContainer {
+		@include breakpoint-down(medium) {
+			flex-direction: column;
+			align-items: center;
+			padding-top: pxToRem(10);
+		}
+		@include breakpoint-up(large) {
+			padding-top: pxToRem(50);
+			height: 500px;
+
+			> div {
+				&:first-child {
+					align-self: flex-start;
+				}
+				&:nth-child(2) {
+					align-self: center;
+				}
+				&:last-child {
+					align-self: flex-end;
+				}
+			}
+		}
+		padding-left: pxToRem(64);
+		padding-right: pxToRem(64);
+	}
+}

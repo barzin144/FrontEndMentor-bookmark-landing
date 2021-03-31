@@ -1,0 +1,46 @@
+.card {
+	width: pxToRem(280);
+	text-align: center;
+	box-shadow: 0px 10px 15px 5px $Light_Gray;
+	border-radius: 15px;
+	padding: pxToRem(20);
+
+	@include breakpoint-down(medium) {
+		margin-top: pxToRem(30);
+	}
+
+	&__image {
+		margin-top: pxToRem(20);
+	}
+	&__text {
+		span {
+			display: block;
+		}
+		&__title {
+			font-size: $font-med;
+			font-weight: 500;
+			color: $Very_Dark_Blue;
+			margin-bottom: pxToRem(15);
+			margin-top: pxToRem(35);
+		}
+		&__description {
+			font-size: $font-sm;
+			color: $Grayish_Blue;
+		}
+	}
+
+	&__button {
+		padding-top: pxToRem(25);
+		margin-top: pxToRem(40);
+		position: relative;
+		&::before {
+			content: "";
+			background-image: url('../images//bg-dots.svg');
+			width: 280px;
+			height: 4px;
+			position: absolute;
+			top: 0px;
+			left: -20px;
+		}
+	}
+}
