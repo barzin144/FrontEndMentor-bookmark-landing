@@ -1,5 +1,6 @@
 import React from "react";
 import Download from "./download";
+import FAQ from "./FAQ";
 import Feature from "./feature";
 import Header from "./header";
 import Hero from "./hero";
@@ -13,6 +14,7 @@ const App = () => {
             <Feature />
             <Tabs/>
             <Download/>
+            <FAQ/>
         </>
     );
 };

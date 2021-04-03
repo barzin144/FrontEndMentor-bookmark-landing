@@ -1,0 +1,54 @@
+.accordion {
+	&__title {
+		height: pxToRem(65);
+		border-top: 1px solid $Light_Gray;
+
+		h1 {
+			font-size: $font_med;
+			padding-top: pxToRem(25);
+			padding-bottom: pxToRem(25);
+			font-weight: 500;
+			cursor: pointer;
+			position: relative;
+
+			&:hover {
+				color: $Soft_Red;
+				transition: color 400ms ease-in-out;
+			}
+			&::after {
+				content: "";
+				background-image: url('../images/icon-arrow.svg');
+				transition: all 400ms ease-out;
+				position: absolute;
+				top: pxToRem(25);
+				right: pxToRem(20);
+				width: pxToRem(18);
+				height: pxToRem(12);
+			}
+
+			&.open {
+				&::after {
+					transform: rotate(180deg);
+					background-image: url('../images/icon-arrow-red.svg');
+				}
+			}
+		}
+	}
+
+	&__description {
+		p {
+			transition: opacity 400ms ease-out, font-size 100ms ease-out;
+			font-size: 0;
+			padding: 0;
+			margin: 0;
+			opacity: 0;
+
+			&.open {
+				font-size: $font_med;
+				padding-top: pxToRem(25);
+				padding-bottom: pxToRem(25);
+				opacity: 1;
+			}
+		}
+	}
+}

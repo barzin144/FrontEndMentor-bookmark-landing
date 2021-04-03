@@ -1,0 +1,23 @@
+.faq {
+	margin-top: pxToRem(160);
+
+	@include breakpoint-up(large) {
+		padding-left: pxToRem(256);
+		padding-right: pxToRem(256);
+	}
+	&__accordionContainer {
+		margin-top: pxToRem(65);
+	}
+	&__text {
+		text-align: center;
+
+		h1 {
+			font-size: pxToRem(30);
+			margin-bottom: pxToRem(30);
+		}
+
+		p {
+			font-size: $font_med;
+		}
+	}
+}
