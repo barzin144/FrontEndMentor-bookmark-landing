@@ -7,6 +7,7 @@
 	}
 	&__accordionContainer {
 		margin-top: pxToRem(65);
+		border-bottom: 1px solid $Light_Gray;
 	}
 	&__text {
 		text-align: center;
@@ -19,5 +20,10 @@
 		p {
 			font-size: $font_med;
 		}
+	}
+
+	&__button {
+		margin-top: pxToRem(50);
+		text-align: center;
 	}
 }

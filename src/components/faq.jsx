@@ -56,6 +56,9 @@ const FAQ = () => {
                         setOpenedAccordion={setOpenedAccordion}
                     />
                 </div>
+                <div className="faq__button">
+                    <a className="button blue-btn">More Info</a>
+                </div>
             </div>
         </section>
     );
