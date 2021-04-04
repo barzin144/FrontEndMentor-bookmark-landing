@@ -112,6 +112,9 @@
 
 	&__contentText {
 		flex: 1;
+		position: relative;
+		z-index: 1;
+
 		@include breakpoint-up(large) {
 			padding-top: pxToRem(80);
 		}
