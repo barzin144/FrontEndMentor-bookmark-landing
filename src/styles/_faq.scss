@@ -1,6 +1,10 @@
 .faq {
 	margin-top: pxToRem(160);
 
+	@include breakpoint-down(medium) {
+		margin-top: pxToRem(80);
+	}
+
 	@include breakpoint-up(large) {
 		padding-left: pxToRem(256);
 		padding-right: pxToRem(256);
