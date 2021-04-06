@@ -1,0 +1,32 @@
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	&:invalid:not(:placeholder-shown) {
+		border: 2px solid $Soft_Red;
+		background-image: url('../images/icon-error.svg');
+		background-repeat: no-repeat;
+		background-position: 97% center;
+		& ~ .requirements {
+			max-height: pxToRem(30);
+		}
+	}
+}
+
+.requirements {
+	margin-top: -5px;
+	max-height: 0;
+	border-radius: 5px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	width: 100%;
+	background-color: $Soft_Red;
+	color: white;
+	overflow: hidden;
+
+	a {
+		font-style: italic;
+		display: block;
+		font-size: pxToRem(10);
+		padding: pxToRem(10) pxToRem(10) pxToRem(5) pxToRem(10);
+	}
+}
