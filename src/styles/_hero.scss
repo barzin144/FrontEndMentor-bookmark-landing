@@ -17,7 +17,10 @@
 		margin-top: pxToRem(32);
 
 		a {
-			margin-right: pxToRem(16);
+			&:first-child {
+				margin-right: pxToRem(16);
+				margin-left: pxToRem(16);
+			}
 			margin-bottom: pxToRem(16);
 			font-weight: 500;
 		}
