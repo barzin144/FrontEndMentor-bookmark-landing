@@ -1,0 +1,62 @@
+.contactUs {
+	.container {
+		padding-top: pxToRem(70);
+		padding-bottom: pxToRem(70);
+	}
+	margin-top: pxToRem(160);
+	background-color: $Soft_Blue;
+	@include breakpoint-down(medium) {
+		margin-top: pxToRem(80);
+	}
+
+	&__text {
+		text-align: center;
+		color: white;
+		h1 {
+			font-size: pxToRem(30);
+			margin-top: pxToRem(40);
+			color: white;
+			@include breakpoint-up(large) {
+				width: pxToRem(400);
+			}
+			@include breakpoint-down(medium) {
+				margin-top: pxToRem(15);
+			}
+		}
+
+		a {
+			font-size: $font_med;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+	}
+
+	&__form {
+		margin-top: pxToRem(35);
+		form {
+			@include breakpoint-down(small) {
+				flex-direction: column;
+			}
+		}
+		.inputContainer {
+			@include breakpoint-up(medium) {
+				margin-right: pxToRem(15);
+			}
+			@include breakpoint-down(small) {
+				margin-bottom: pxToRem(15);
+			}
+			input {
+				width: 100%;
+				@include breakpoint-up(medium) {
+					width: pxToRem(300);
+				}
+			}
+		}
+		.button {
+			align-self: flex-start;
+			@include breakpoint-down(small) {
+				width: 100%;
+			}
+		}
+	}
+}
