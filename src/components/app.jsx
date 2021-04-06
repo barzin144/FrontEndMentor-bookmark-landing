@@ -1,4 +1,5 @@
 import React from "react";
+import ContactUs from "./contactUs";
 import Download from "./download";
 import FAQ from "./FAQ";
 import Feature from "./feature";
@@ -15,6 +16,7 @@ const App = () => {
             <Tabs/>
             <Download/>
             <FAQ/>
+            <ContactUs/>
         </>
     );
 };

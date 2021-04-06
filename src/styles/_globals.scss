@@ -23,7 +23,9 @@ button,
 	border-radius: 5px;
 	display: inline-block;
 	cursor: pointer;
-
+	&:focus {
+		outline: none;
+	}
 	&.gray-btn {
 		box-shadow: 0px 2px 5px 0px $Grayish_Blue;
 		border-color: white;
@@ -46,6 +48,19 @@ button,
 
 		&:hover {
 			color: $Soft_Blue;
+			background-color: white;
+			transition: background-color 300ms ease-in-out;
+		}
+	}
+
+	&.red-btn {
+		box-shadow: 0px 2px 5px 0px $Soft_Red;
+		color: white;
+		background-color: $Soft_Red;
+		border-color: $Soft_Red;
+
+		&:hover {
+			color: $Soft_Red;
 			background-color: white;
 			transition: background-color 300ms ease-in-out;
 		}
@@ -103,6 +118,10 @@ p {
 	&-ai-c {
 		align-items: center;
 	}
+
+	&-d-c {
+		flex-direction: column;
+	}
 }
 
 h1 {
@@ -115,7 +134,21 @@ p {
 	font-size: $font_sm;
 	color: $Grayish_Blue;
 }
+input {
+	padding: pxToRem(15);
+	border-radius: 5px;
+	border: none;
 
+	&::placeholder {
+		/* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: $Grayish_Blue;
+		opacity: 1; /* Firefox */
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
 // Visibility
 .hide-for-desktop {
 	@include breakpoint-up(large) {
