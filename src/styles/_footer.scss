@@ -1,0 +1,89 @@
+.footer {
+	.container {
+		justify-content: space-between;
+		@include breakpoint-down(medium) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	background-color: $Very_Dark_Blue;
+	&__logo {
+		width: pxToRem(148);
+		height: pxToRem(25);
+		background-image: url('../images//logo-bookmark-text-white.svg');
+	}
+	&__links {
+		flex: 2;
+		padding-top: 5px;
+		padding-left: 60px;
+
+		@include breakpoint-down(medium) {
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+			padding-top: pxToRem(40);
+		}
+		a {
+			color: white;
+			font-weight: 400;
+			letter-spacing: 1px;
+			margin-right: pxToRem(40);
+
+			@include breakpoint-down(medium) {
+				padding-bottom: pxToRem(40);
+				margin-right: 0;
+			}
+
+			&:hover {
+				cursor: pointer;
+				color: $Soft_Red;
+				transition: color 300ms ease-in-out;
+			}
+		}
+	}
+	&__social {
+		a {
+			transition: background-image 300ms ease-in-out;
+			&.facebook {
+				display: inline-block;
+				width: pxToRem(24);
+				height: pxToRem(24);
+				background-image: url('../images/icon-facebook.svg');
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin-right: pxToRem(40);
+
+				&:hover {
+					background-image: url('../images/icon-facebook-red.svg');
+				}
+			}
+			&.twitter {
+				display: inline-block;
+				width: pxToRem(24);
+				height: pxToRem(24);
+				background-image: url('../images/icon-twitter.svg');
+				background-position: center center;
+				background-repeat: no-repeat;
+
+				&:hover {
+					background-image: url('../images/icon-twitter-red.svg');
+				}
+			}
+		}
+	}
+
+	.attribution {
+		text-align: center;
+		color: white;
+
+		a {
+			color: white;
+			text-decoration: none;
+			&:hover {
+				cursor: pointer;
+				color: $Soft_Red;
+				transition: color 300ms ease-in-out;
+			}
+		}
+	}
+}

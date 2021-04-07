@@ -12,7 +12,7 @@ const Hero = () => {
                         A clean and simple interface to organize your favourite websites. Open a new
                         browser tab and see your sites load instantly. Try it for free.
                     </p>
-                    <div className="hero__Button">
+                    <div className="hero__button">
                         <a href="#" className="button blue-btn">Get it on Chrome</a>
                         <a href="#" className="button gray-btn">Get it on Firefox</a>
                     </div>
