@@ -4,10 +4,10 @@
 	@include breakpoint-down(medium) {
 		margin-top: pxToRem(80);
 	}
-
-	@include breakpoint-up(large) {
-		padding-left: pxToRem(256);
-		padding-right: pxToRem(256);
+	.container {
+		@include breakpoint-up(large) {
+			width: pxToRem(600);
+		}
 	}
 	&__accordionContainer {
 		margin-top: pxToRem(65);
